@@ -3,6 +3,7 @@
 # class.
 
 # Author: Andrew Guerra
+from dice import Dice
 
 class Player:
 
@@ -14,8 +15,8 @@ class Player:
         #       1. "Injured" --> the Player becomes injured
         #       2. "Ejected" --> the Player gets a Red Card
         #       3. "Warned" --> the Player gets a Yellow Card
-        self.D12 = None
-        self.number_of_rolls = 0
+        self.D12 = Dice(12)
+        self.number_of_rolls = 1
         self.injured = False
         self.ejected = False
         self.warned = False
@@ -32,6 +33,10 @@ class Player:
 
 
 class Keeper(Player):
+
+    def __init__(self):
+        Player.__init__()
+
 
     def offensive_play(self):
         pass
