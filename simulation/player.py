@@ -36,7 +36,7 @@ class Keeper(Player):
 
     def __init__(self):
         Player.__init__()
-
+        self.D12.set_values(5, 7)
 
     def offensive_play(self):
         pass
@@ -46,6 +46,10 @@ class Keeper(Player):
 
 
 class Defender(Player):
+
+    def __init__(self):
+        Player.__init__()
+        self.D12.set_values()
 
     def offensive_play(self):
         pass
